@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "669ced1743015226c4357f92"
+  },
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "coverImage": "https://m.media-amazon.com/images/I/41mqil02y0L._AC_UF1000,1000_QL80_.jpg",
+  "description": "A classic novel of the Roaring Twenties.",
+  "genre": "Classic",
+  "averageRating": 5,
+  "Review": "A timeless classic with remarkable prose.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "669ced1743015226c4357f93"
+  },
+  "title": "1984",
+  "author": "George Orwell",
+  "coverImage": "https://i.pinimg.com/originals/bd/29/34/bd293499ee09b8fa4182f2ae24d83133.jpg",
+  "description": "A dystopian social science fiction novel and cautionary tale.",
+  "genre": "Dystopian",
+  "averageRating": 3,
+  "Review": "A chilling vision of a totalitarian future.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "669ced1743015226c4357f94"
+  },
+  "title": "To Kill a Mockingbird",
+  "author": "Harper Lee",
+  "coverImage": "https://images-na.ssl-images-amazon.com/images/I/81aY1lxk+9L._AC_UL210_SR210,210_.jpg",
+  "description": "A novel about racial injustice in the Deep South.",
+  "genre": "Historical",
+  "averageRating": 5,
+  "Review": "A powerful exploration of morality and justice.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "669ced1743015226c4357f95"
+  },
+  "title": "The Catcher in the Rye",
+  "author": "J.D. Salinger",
+  "coverImage": "https://i.redd.it/ofcz5klsqvh21.jpg",
+  "description": "A story about teenage angst and alienation.",
+  "genre": "Literary",
+  "averageRating": 4.4,
+  "Review": "An insightful portrayal of adolescent disillusionment.",
+  "__v": 0
+}]
