@@ -37,7 +37,9 @@ const AudiobookList = () => {
   useEffect(() => {
     const fetchAudiobooks = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/audiobooks");
+        const response = await axios.get(
+          "https://audio-book-backend.onrender.com/audiobooks"
+        );
         setAudiobooks(response.data);
         setLoading(false);
       } catch (error) {
@@ -63,7 +65,7 @@ const AudiobookList = () => {
   const handleReviewSubmit = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:5001/audiobooks/${selectedAudiobook._id}/reviews`,
+        `https://audio-book-backend.onrender.com/audiobooks/${selectedAudiobook._id}/reviews`,
         {
           userId: selectedAudiobook._id,
           rating,

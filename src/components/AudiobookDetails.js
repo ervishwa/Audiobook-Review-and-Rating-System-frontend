@@ -10,7 +10,7 @@ const AudiobookList = () => {
   useEffect(() => {
     const fetchAudiobooks = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/audiobooks');
+        const response = await axios.get('https://audio-book-backend.onrender.com/audiobooks');
         setAudiobooks(response.data);
       } catch (error) {
         console.error('Error fetching audiobooks:', error);

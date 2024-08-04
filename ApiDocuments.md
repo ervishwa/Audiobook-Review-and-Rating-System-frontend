@@ -8,7 +8,7 @@ This Express.js application provides endpoints for managing audiobooks and their
 
 - **Backend Framework**: Express.js
 - **Database**: MongoDB Atlas (using Mongoose ODM)
-- **Middleware**: 
+- **Middleware**:
   - `express.json()`: Parses JSON bodies for incoming requests.
   - `cors()`: Enables Cross-Origin Resource Sharing.
 - **Models**:
@@ -21,10 +21,11 @@ This Express.js application provides endpoints for managing audiobooks and their
 
 **URL**: `/audiobooks`  
 **Method**: `GET`  
-**Description**: Retrieves a list of all audiobooks from the database.  
+**Description**: Retrieves a list of all audiobooks from the database.
 
-**Response**:  
-- **Status Code**: `200 OK`  
+**Response**:
+
+- **Status Code**: `200 OK`
 - **Body**: An array of audiobook objects, each containing:
   - `title`: String
   - `author`: String
@@ -34,6 +35,7 @@ This Express.js application provides endpoints for managing audiobooks and their
   - `averageRating`: Number
 
 **Example**:
+
 ```json
 [
   {
@@ -55,15 +57,18 @@ This Express.js application provides endpoints for managing audiobooks and their
 **Description**: Retrieves details of a single audiobook by ID along with its reviews.
 
 **URL Parameters**:
+
 - `id` (required): The ID of the audiobook.
 
-**Response**:  
-- **Status Code**: `200 OK`  
+**Response**:
+
+- **Status Code**: `200 OK`
 - **Body**: An object containing:
   - `audiobook`: The audiobook object.
   - `reviews`: An array of review objects for the audiobook.
 
 **Example**:
+
 ```json
 {
   "audiobook": {
@@ -95,18 +100,22 @@ This Express.js application provides endpoints for managing audiobooks and their
 **Description**: Submits a new review or updates an existing review for an audiobook.
 
 **URL Parameters**:
+
 - `id` (required): The ID of the audiobook.
 
 **Request Body**:
+
 - `userId` (required): The ID of the user submitting the review.
 - `rating` (required): Rating given to the audiobook (number).
 - `reviewText` (required): Text of the review.
 
-**Response**:  
-- **Status Code**: `201 Created` (for a new review) or `200 OK` (for an updated review)  
+**Response**:
+
+- **Status Code**: `201 Created` (for a new review) or `200 OK` (for an updated review)
 - **Body**: The review object.
 
 **Example**:
+
 ```json
 {
   "_id": "60c72b3e5b1f4c001f9d2b8e",
@@ -125,16 +134,20 @@ This Express.js application provides endpoints for managing audiobooks and their
 **Description**: Updates details of an existing audiobook. Currently, only the `averageRating` can be updated.
 
 **URL Parameters**:
+
 - `id` (required): The ID of the audiobook.
 
 **Request Body**:
+
 - `averageRating` (required): The updated average rating (number).
 
-**Response**:  
-- **Status Code**: `200 OK`  
+**Response**:
+
+- **Status Code**: `200 OK`
 - **Body**: The updated audiobook object.
 
 **Example**:
+
 ```json
 {
   "_id": "60c72b2f5b1f4c001f9d2b8d",
@@ -150,6 +163,7 @@ This Express.js application provides endpoints for managing audiobooks and their
 ## Deployment Steps
 
 1. **Clone the Repository**:
+
    ```bash
    git clone https://github.com/your-repository/audiobooks-api.git
    cd audiobooks-api
@@ -157,25 +171,29 @@ This Express.js application provides endpoints for managing audiobooks and their
 
 2. **Install Dependencies**:
    Ensure you have Node.js installed. Run:
+
    ```bash
    npm install
    ```
 
 3. **Set Up Environment Variables**:
    Create a `.env` file in the root directory of the project and add the following:
+
    ```env
    MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/database?retryWrites=true&w=majority
    PORT=5001
    ```
+
    Replace `username`, `password`, `cluster`, and `database` with your MongoDB credentials and details.
 
 4. **Start the Server**:
+
    ```bash
    npm start
    ```
 
 5. **Verify the API**:
-   Open your browser or use tools like Postman to test the API endpoints at `http://localhost:5001`.
+   Open your browser or use tools like Postman to test the API endpoints at `https://audio-book-backend.onrender.com`.
 
 ## Conclusion
 
