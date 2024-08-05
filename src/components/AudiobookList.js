@@ -222,7 +222,20 @@ const AudiobookList = () => {
       {filteredAudiobooks.length === 0 ? (
         <p>No audiobooks found.</p>
       ) : (
-        <Box display="flex" flexWrap="wrap">
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: {
+              xs: "column", // For extra-small screens (0px to 599px)
+              sm: "column", // For small screens (600px to 959px)
+              md: "row", // For medium screens (960px to 1279px) and up
+            },
+            flexWrap: "wrap",
+            gap: "5",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           {filteredAudiobooks.map((audiobook) => (
             <Card
               key={audiobook._id}
@@ -230,6 +243,13 @@ const AudiobookList = () => {
                 display: "flex",
                 marginBottom: 2,
                 width: "50%",
+                flexDirection: {
+                  xs: "column", // For extra-small screens (0px to 599px)
+                  sm: "column", // For small screens (600px to 959px)
+                  md: "row", // For medium screens (960px to 1279px) and up
+                },
+                justifyContent: "center",
+                alignItems: "center",
                 transition: "transform 0.3s, box-shadow 0.3s", // Smooth transition for hover effects
                 "&:hover": {
                   transform: "scale(1.05)", // Slight zoom effect on hover
@@ -309,7 +329,14 @@ const AudiobookList = () => {
               </Box>
               <CardMedia
                 component="img"
-                sx={{ width: 200 }}
+                sx={{
+                  width: 200,
+                  flexGrow: {
+                    xs: 1, // For extra-small screens (0px to 599px)
+                    sm: 1, // For small screens (600px to 959px)
+                    md: 0, // For medium screens (960px to 1279px) and up
+                  },
+                }}
                 image={audiobook.coverImage}
                 alt={audiobook.title}
               />
@@ -325,7 +352,7 @@ const AudiobookList = () => {
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              width: 400,
+              maxWidth: 400,
               bgcolor: "background.paper",
               border: "2px solid #000",
               boxShadow: 24,
